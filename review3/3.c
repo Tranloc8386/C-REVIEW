@@ -1,6 +1,5 @@
 
 
-
 // Bài 1. Nhập vào một chuỗi, sau đó in chuỗi đó ra màn hình.
 #include <stdio.h>
 int main(int argc, char const *argv[])
@@ -61,17 +60,21 @@ int main()
 
 #include <stdio.h>
 #include <string.h>
-
-int main(){
-    char s[100];
+int main()
+{
+    char c[1000];
     printf("Nhap chuoi: ");
-    gets(s);
+    gets(c);
     int cnt[256] = {0};
-    for(int i = 0; i < strlen(s); i++){
-        cnt[s[i]]++;
+
+    for (int i = 0; i < strlen(c); i++)
+    {
+        cnt[c[i]]++;
     }
-    for(int i = 0; i < 256; i++){
-        if(cnt[i] != 0){
+    for (int i = 0; i < 256; i++)
+    {
+        if (cnt[i] != 0)
+        {
             printf("%c xuat hien %d lan\n", i, cnt[i]);
         }
     }
